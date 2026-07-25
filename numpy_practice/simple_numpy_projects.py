@@ -19,3 +19,12 @@ summation = np.sum(squaring, axis = 1) #axis = 1 sums horizontally down the rows
 square_root = np.sqrt(summation)
 print(square_root)
 
+#Excercise 3
+# Find all points that lie inside a sphere of radius R = 25
+
+filtered_points = array_1[square_root<=25]
+print(filtered_points)
+
+fit_in_sphere = square_root[square_root<=25]
+normalized_points = filtered_points/fit_in_sphere[:, np.newaxis]
+print(normalized_points)
