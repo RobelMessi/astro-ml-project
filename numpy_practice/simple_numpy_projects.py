@@ -7,7 +7,15 @@ import numpy as np
 # (x, y, z) between -50 and 50
 
 rng = np.random.default_rng()
-array_1 = rng.uniform(low = -50.0, high = 50.0, size = (100,3) )
-array_2 = rng.integers(low = -50, high = 50, size = (100,3) )
-array_3 = rng.integers(low = -50, high = 50, size = (100,3) )
+array_1 = rng.uniform(low = -50.0, high = 50.0, size = (100,3) ) #floating point integers from -50.0 to 50.0
+
 print(array_1)
+
+
+#Excercise 2
+# Compute the 3D Euclidean distance from the origin for all 100 points
+squaring = array_1 **2 #squares every number in the array
+summation = np.sum(squaring, axis = 1) #axis = 1 sums horizontally down the rows, giving you one-hundred totals
+square_root = np.sqrt(summation)
+print(square_root)
+
